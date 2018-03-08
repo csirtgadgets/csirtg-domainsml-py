@@ -1,0 +1,12 @@
+machine:
+  python:
+    version: 2.7.12
+
+test:
+  override:
+    - py.test -v -s test
+
+dependencies:
+    pre:
+       - pip install pip --upgrade
+       - pip install -r dev_requirements.txt 
