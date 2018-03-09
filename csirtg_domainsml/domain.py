@@ -181,7 +181,7 @@ def _extract_features(u):
 
 def predict(d, classifier):
     feats = _extract_features(d)
-    feats = np.array(feats, dtype=int)
+    feats = np.array([feats], dtype=int)
     return classifier.predict(feats)
 
 
