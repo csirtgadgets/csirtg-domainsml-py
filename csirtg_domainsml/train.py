@@ -10,12 +10,16 @@ import textwrap
 from csirtg_domainsml.domain import _extract_features
 import os
 
+PYVERSION = 2
 if sys.version_info > (3,):
+    PYVERSION = 3
     basestring = (str, bytes)
 
 me = os.path.dirname(__file__)
 
 MODEL = os.getenv('CSIRTG_DOMAINSML_MODEL', '%s/../data/model.pickle' % me)
+if PYVERSION == 2:
+    MODEL = os.getenv('CSIRTG_DOMAINSML_MODEL', '%s/../data/py2model.pickle' % me)
 
 
 def accuracy(classifier, test_inputs, test_outputs):
@@ -104,8 +108,9 @@ def main():
         accuracy(classifier, test_inputs, test_outputs)
 
     if args.save:
-        with open(args.save, 'w') as OUTFILE:
-            print(pickle.dumps(classifier), file=OUTFILE)
+        with open(args.save, 'wb') as OUTFILE:
+            # print(pickle.dump(classifier), file=OUTFILE)
+            pickle.dump(classifier, OUTFILE)
 
         raise SystemExit
 

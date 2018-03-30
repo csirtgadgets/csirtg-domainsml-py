@@ -44,7 +44,7 @@ setup(
     author_email="wes@barely3am.com",
     packages=find_packages(),
     install_requires=[
-        'scikit-learn==0.16.0',
+        'scikit-learn>=0.19,<0.20',
         'numpy',
         'scipy'
     ],

@@ -9,7 +9,10 @@ from .constants import PYVERSION
 me = os.path.dirname(__file__)
 
 MODEL = os.getenv('CSIRTG_DOMAINSML_MODEL', '%s/../data/model.pickle' % me)
+if PYVERSION == 2:
+    MODEL = os.getenv('CSIRTG_DOMAINSML_MODEL', '%s/../data/py2model.pickle' % me)
 
+print(MODEL)
 CLS = None
 if os.path.exists(MODEL):
     with open(MODEL, 'rb') as F:
@@ -18,7 +21,7 @@ if os.path.exists(MODEL):
 
 def predict(i, classifier=CLS):
     if not classifier:
-        with open(MODEL) as FILE:
+        with open(MODEL, 'rb') as FILE:
             classifier = pickle.load(FILE)
 
     return predict_domain(i, classifier)[0]
