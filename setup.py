@@ -47,7 +47,8 @@ setup(
     install_requires=[
         'scikit-learn>=0.19,<0.20',
         'numpy',
-        'scipy'
+        'scipy',
+        'editdistance'
     ],
     entry_points={
        'console_scripts': [
