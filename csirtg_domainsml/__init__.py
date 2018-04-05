@@ -12,7 +12,6 @@ MODEL = os.getenv('CSIRTG_DOMAINSML_MODEL', '%s/../data/model.pickle' % me)
 if PYVERSION == 2:
     MODEL = os.getenv('CSIRTG_DOMAINSML_MODEL', '%s/../data/py2model.pickle' % me)
 
-print(MODEL)
 CLS = None
 if os.path.exists(MODEL):
     with open(MODEL, 'rb') as F:
