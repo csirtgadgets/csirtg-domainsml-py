@@ -10,10 +10,15 @@ import sys
 import numpy as np
 from pprint import pprint
 import re
+import sys
 
 me = os.path.dirname(__file__)
 
-with open('%s/../data/whitelist.txt' % me) as F:
+WHITELIST_PATH = '%s/../data/whitelist.txt' % me
+if os.path.exists(os.path.join(sys.prefix, 'data', 'whitelist.txt')):
+    WHITELIST_PATH = os.path.join(sys.prefix, 'data', 'whitelist.txt')
+
+with open(WHITELIST_PATH) as F:
     GOOD = set(l.strip('\n') for l in F.readlines())
 
 
