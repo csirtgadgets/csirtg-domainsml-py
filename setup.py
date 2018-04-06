@@ -28,7 +28,7 @@ data_files = [
     'data/whitelist.txt',
     'data/blacklist.txt',
     'data/model.pickle',
-    'data/py2model.pickle'
+    'data/model_py2.pickle'
 ]
 
 setup(
@@ -39,7 +39,7 @@ setup(
     long_description="",
     url="https://github.com/csirtgadgets/csirtg-domainsml",
     license='MPLv2',
-    data_files=[('data', data_files)],
+    data_files=[('csirtg_domainsml/data', data_files)],
     keywords=['network', 'security'],
     author="Wes Young",
     author_email="wes@barely3am.com",

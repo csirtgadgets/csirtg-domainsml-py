@@ -19,7 +19,7 @@ me = os.path.dirname(__file__)
 
 MODEL = os.getenv('CSIRTG_DOMAINSML_MODEL', '%s/../data/model.pickle' % me)
 if PYVERSION == 2:
-    MODEL = os.getenv('CSIRTG_DOMAINSML_MODEL', '%s/../data/py2model.pickle' % me)
+    MODEL = os.getenv('CSIRTG_DOMAINSML_MODEL', '%s/../data/model_py2.pickle' % me)
 
 
 def accuracy(classifier, test_inputs, test_outputs):

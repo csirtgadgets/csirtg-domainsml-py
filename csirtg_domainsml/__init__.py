@@ -9,10 +9,10 @@ import sys
 
 MODEL = 'model.pickle'
 if PYVERSION == 2:
-    MODEL = 'py2model.pickle'
+    MODEL = 'model_py2.pickle'
 
-if os.path.exists(os.path.join(sys.prefix, 'data', MODEL)):
-    MODEL = os.path.join(sys.prefix, 'data', MODEL)
+if os.path.exists(os.path.join(sys.prefix, 'csirtg_domainsml', 'data', MODEL)):
+    MODEL = os.path.join(sys.prefix, 'csirtg_domainsml', 'data', MODEL)
 else:
     MODEL = os.path.join('%s/../data/%s' % (os.path.dirname(__file__), MODEL))
 
