@@ -1,6 +1,7 @@
 sudo: required
 dist: trusty
 language: python
+
 cache:
   - pip
   - apt
@@ -24,9 +25,9 @@ notifications:
 deploy:
   provider: pypi
   user: wesyoung
-  password:
-    secure: hkb9E2d6iYS7GZ/nxzQPezC/qgNmKYCJOatA6CTngiaomJLIROjb5A86msRNMDW9h6FlZfgUnShqyx5UnIbOmN5MmDWJy+uOJ34zj5D5a33r+Xn8hQvpEvv7nd/ug27sHO3J6esN+LR5IXjllrrlaku3sRVP/V7SSSHb7oDbCil0Ch4thC3ZXkJe0mcpAbn5o+vtO7BBU18OW/zFQOIMuHa0NwzkwQe7MWbnjbL0iIHS+zDYna5U4uEkFJ8ztEgZrTMYQpkTHlSwuktDlmdhzH9RlJyw0Eyz4r7Y9vMluokU/gLhVSVlel7rrcg+hQcszFujHGXQE1N8QKLAlK8WoR4CmJehxBnLXXJLLpe+qS9OIdHejHRUXyV0eHMvSiM1w+VtgS1NWbUqzp9ICp2+j3oe05pceQNhpScUiA2DOr30JEyIyLfaw9w0kEAvzUvuhzkLUZ+GMJkvPPGLsb7MeLmIadBit+V0T1ZbOqNNlb0xq3AqdOndmplTy/X9+s18/CrBscjNU6scusqddhcKzUUcoxASOfaetBEmrtZASxhB3OZhDH02806ST/Jst7S5j0oClDljicqSL5CWmPYPS6P6C9wiBI8BXQEHNe7Gw/I3ElxUEbnhqa+1/6PJaA9znCznPIwynKsF31mb3ojB70RaUD0QruKAkb1Tjg26kAQ=
   on:
     branch: master
     tags: true
     condition: $TRAVIS_PYTHON_VERSION = "3.6"
+  password:
+    secure: FH/uQUSHE/5/ahHddlriVLsEA0IBwt9AnIMGoCMEVOBXUM6cElNQSwykmvvO60JnOYgMFM/0UJRlsRStw5Q9ocRk8vaj9OK+rYJYokRX/+W0YP5NCB/GGtedHz7MQ+HQrZQoeJ/HUcth1a3XLgElAJh47rL8RyA44a/pyF+4KLCgBwhnajjE+kEJ9S5r5vyLKVvdj6b5SqbYSQq65ww4rtXgA0i2QNFpTK0mfkRvi40O1AFXqSB6E37xTd8rtQdehL/RJk4f6vlPQai/WHd2MJirUXXMVHsev7QS33pygqEaOEaaa/EG6Te4pDxw6M+qlSUNreO/8iAlx/b8bWRxGclMeMfI+HgtdrlvcqUa9bzLZoWnJv6MDX70G1ZV/1nIVrLetLbxOT7neYzp6lYx+8CCQ4N/jui4sSrur2C5hnwvpz0ug7dBCMQM1rrvXUAYX/iKDF5aA2TPfHTQVaErxBtYfS06hYWZmYtqb9t4rCGh3qjjXMnc5FVZEGahuzBdHOnxYAcIJBdhWGuPKr53C7HOZdM+UlV71TFGWDSC3HWuIDeYyfjd7uDxUCPRzUr/4m2WAifc5HBh16eWtRoroEqma3uiutoPsoU/0nUO8LinFLfFQ9UACU4nPt5sh3GShCLslRt0epW1xhXGA1Tg2vmyRf2BaLVJgsdYuE0O7MY=
