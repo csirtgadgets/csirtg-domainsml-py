@@ -18,6 +18,9 @@ WHITELIST_PATH = '%s/../data/whitelist.txt' % me
 if os.path.exists(os.path.join(sys.prefix, 'csirtg_domainsml', 'data', 'whitelist.txt')):
     WHITELIST_PATH = os.path.join(sys.prefix, 'csirtg_domainsml', 'data', 'whitelist.txt')
 
+elif os.path.exists(os.path.join('usr', 'local', 'csirtg_domainsml', 'data', 'whitelist.txt')):
+    WHITELIST_PATH = os.path.join('usr', 'local', 'csirtg_domainsml', 'data', 'whitelist.txt')
+
 with open(WHITELIST_PATH) as F:
     GOOD = set(l.strip('\n') for l in F.readlines())
 

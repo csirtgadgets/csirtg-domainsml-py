@@ -998,3 +998,5 @@ wired.com
 atwiki.jp
 eonline.com
 indiamart.com
+aka.ms
+is.gd
